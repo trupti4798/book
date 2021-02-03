@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body{
+	background-image:url("/assets/1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.box{
+	width:300px;
+	height:300px;
+	position:static;
+	z-index:1;
+	border: 5px solid black ;
+	max-width:360px;
+	margin:0 auto 100px;
+	margin-left:800px;
+	padding:45px;
+	text-align:center;
+	width:60%;
+	margin-top: 90px;
+	
+}
+
+button{
+	border:1px solid;
+	border-radius: 5px;
+	font-size:15px;
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+
+<h1>Detail of Book</h1>
+<!--<h1>Book#show</h1>
+<p>Find me in app/views/book/show.html.erb</p>--->
+
+<h1><%= @book.name %></h1>
+<p>
+<strong>Price: </strong> $<%= @book.price %><br>
+<strong>Author: </strong><%= @book.author %><br>
+<strong>Created Date: </strong><%= @book.created_at %><br>
+</p>
+
+<button><%= link_to 'Back', {:action => 'list'} %></button>
+
+</div>
+</body>
+</html>

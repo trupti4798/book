@@ -1,0 +1,40 @@
+/*body,html{
+	height: 100%;
+	margin:0;
+}
+
+
+.bg{
+ 	background-image:url("C:/Users/Domain/Desktop/images/2.jpg");
+ 	background-repeat: no-repeat;
+ 	height:100%;
+ 	background-position: center;
+ 	background-size: cover;
+ }
+ 	
+
+button{
+	border:none;
+	background-color:#bfbfbf;
+	text-decoration: none;
+	text-align:center;
+	font-size:30px;
+	cursor: pointer; 
+	display: inline-block;
+	margin:10px 300px;
+	border-radius: 10px;
+	color: black;
+}
+
+h1{
+	color: black;
+	padding: 30px 390px 0px;
+
+}
+
+h3{
+	color: black;
+	padding-left: 260px;
+	padding-bottom: 30px;
+
+}*/

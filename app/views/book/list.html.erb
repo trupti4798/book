@@ -1,0 +1,111 @@
+<html>
+<head>
+
+
+<style>
+
+/*body{
+	background-image:url("https://i.pinimg.com/736x/94/2a/21/942a21f55fbe7d4e7b8a783670b23e95.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}*/
+
+body{
+	background-image:url("/assets/1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+td,th{
+    border:1px solid;
+	
+	padding:10px;
+	}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button{
+	border:1px solid;
+	border-radius: 5px;
+	font-size:15px;
+}
+
+
+
+.box{
+	width:400px;
+	height:800px;
+	position:static;
+	z-index:1;
+	border:2px solid black;
+	max-width:360px;
+	margin-left:800px;
+	padding:45px;
+	text-align:center;
+	width:60%;
+	margin-top: 80px;
+	
+}
+
+h1{margin-top: 5px}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="box">
+<h1>All Books</h1>
+<!---<h1>Book#list</h1>
+<p>Find me in app/views/book/list.html.erb</p>--->
+
+<% if @books.blank? %>
+<p><h3>There are no books currently in our system.</h3></p>
+<% else %>
+<p><h3>These are the current books in our system</h3></p>
+
+
+<table id="books">
+
+<tr>
+	<th>Name</th>
+	<th>Actions</th>
+</tr>	
+
+
+<h4>There are <%=  Book.count %> books</h4>
+<% @books.each do |c| %>
+
+
+<tr>
+	<td><%= link_to c.name, {:action => 'show',:controller => 'book', :id => c.id} -%></td>
+
+    <td>
+    	<button><%= link_to "Edit", action:'edit', id: c.id, class: "action edit" %></button>
+    	
+    	<button><%= link_to "Delete", action:'delete', id: c.id, class: "action delete" %></button>
+    </td>
+
+
+</tr>
+
+<% end %>
+</table>
+<% end %>
+<p><button><%= link_to "Add new Book", {:action => 'new',:controller => 'book'}%></button></p>
+<p><button><%= link_to "Home", {:action => 'home',:controller => 'book'}%></button></p>
+
+</div>
+</body>
+</html>
+   
+
+
+
+  

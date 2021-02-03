@@ -1,0 +1,46 @@
+
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+
+body{
+	background:radial-gradient(#fff,#ffd6d6)
+}
+
+.box{
+	width:200px;
+	height:450px;
+	position:static;
+	z-index:1;
+	border:2px solid black;
+	max-width:360px;
+	margin-left: auto;
+	padding:40px;
+	text-align:center;
+	width:60%;
+	margin-right:auto;
+	
+}
+
+</style>
+</head>
+<body>
+
+<div class="box">
+
+
+<h1>New Userlogin</h1>
+
+<%= render 'form', userlogin: @userlogin %>
+
+<%= link_to 'Back', userlogins_path %>
+
+<%= link_to "Back ", controller: "home", action: 'index', class: "back-link"  %>
+
+</div>
+
+</body>
+</html>

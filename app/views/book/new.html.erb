@@ -1,0 +1,71 @@
+<!---<h1>Book#new</h1>
+<p>Find me in app/views/book/new.html.erb</p>-->
+<html>
+<head>
+
+<style>
+
+body{
+	background-image:url("/assets/1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.box{
+	width:200px;
+	height:200px;
+	position:static;
+	z-index:1;
+	border:2px solid black;
+	max-width:360px;
+	margin-left:850px;
+	padding:40px;
+	text-align:center;
+	width:60%;
+	margin-top: 180px;
+	
+}
+
+box button{
+	outline:0;
+	margin-top:15px;
+    width:50%;
+   
+	
+}
+
+.box input{
+	box-sizing:border-box;
+	font-size:15px;
+	padding:2px;
+	margin-bottom: 7px;
+}
+
+</style>
+
+</head>	
+<body>
+
+<div class="box">
+	<h2>Add New Book</h2>
+
+	<%= form_for(:books,url: {controller:"book", action: 'add'}) do |t| %>
+     
+    Name: <%= t.text_field(:name) %><br>
+	Author: <%= t.text_field(:author) %><br>
+	Price: <%= t.text_field(:price) %><br>
+
+	<%= submit_tag("Add Book") %><br>
+
+  <%= link_to "Back to list", controller:"book", action:'list', class: "back-link" %>
+
+<% end %>
+
+</div>
+
+
+
+
+</body>
+</html>

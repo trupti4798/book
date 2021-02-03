@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="style.css" rel="stylesheet">
+
+<style>
+body,html{
+	height: 100%;
+	margin:0;
+}
+
+.bg{
+ 	background-image:url("https://i.pinimg.com/originals/1d/00/88/1d008873c346da889af1fc4cb50384c7.jpg");
+ 	background-repeat: no-repeat;
+ 	height:100%;
+ 	background-position: center;
+ 	background-size: cover;
+ }
+ 	
+
+button{
+	border:none;
+	background-color:#bfbfbf;
+	text-decoration: none;
+	text-align:center;
+	font-size:30px;
+	cursor: pointer; 
+	display: inline-block;
+	margin:10px 300px;
+	border-radius: 10px;
+	color: black;
+}
+
+h1{
+	color: white;
+	padding: 30px 250px 0px;
+
+}
+
+h3{
+	color: white;
+	padding-left: 260px;
+	padding-bottom: 30px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+
+<h1>Welcome to digital library</h1>
+<h3>For the book lover,enjoy the book feast !</h3>
+
+
+<button><a href="book/list">All books</a></button><br>
+
+<button><a href="book/new">Add New book</a></button><br>
+
+<button><%= link_to "Log Out ", controller: "sessions", action: 'destroy' %></button>
+
+
+
+
+
+</div>
+</body>
+</html>

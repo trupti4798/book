@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+
+body{
+	background:radial-gradient(#fff,#ffd6d6)
+}
+
+.box{
+	width:200px;
+	height:250px;
+	position:static;
+	z-index:1;
+	border:2px solid black;
+	max-width:360px;
+	margin-left: auto;
+	padding:40px;
+	text-align:center;
+	width:60%;
+	margin-right:auto;
+	
+}
+
+button{
+	outline:0;
+	margin-top:40px;
+    width:50%;
+   
+	
+}
+
+
+h4{
+	color:black;
+	margin-top: 15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<center><h1>Welcome to Digital Library</h1></center>
+<div class="box">
+
+
+
+
+<% if current_userlogin %>
+ Logged in as <%= current_userlogin.email %>.
+ <%= link_to 'Log Out', logout_path %>
+<% else %>
+<button><%= link_to 'Sign Up', signup_path %></button>
+<button><%= link_to 'Log In', login_path %></button>
+<h4>if you have an account</h4>
+<% end %>
+<p id='notice'><%= notice %></p>
+
+
+
+
+</div>
+</body>
+</html>

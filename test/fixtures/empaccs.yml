@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accno: 1
+  acctype: MyString
+
+two:
+  accno: 1
+  acctype: MyString

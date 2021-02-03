@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+
+body{
+	background:radial-gradient(#fff,#ffd6d6)
+}
+
+.box{
+	width:200px;
+	height:200px;
+	position:static;
+	z-index:1;
+	border:2px solid black;
+	max-width:360px;
+	margin-left: auto;
+	padding:40px;
+	text-align:center;
+	width:60%;
+	margin-right:auto;
+	
+}
+
+box button{
+	outline:0;
+	margin-top:15px;
+    width:50%;
+   
+	
+}
+
+.box input{
+	box-sizing:border-box;
+	font-size:15px;
+	padding:5px;
+	margin-bottom: 20px;
+}
+
+
+</style>
+</head>
+<body>
+<center><h1>Welcome to Digital Library</h1></center>
+<div class="box">
+
+<%= form_for(:users,url: {controller:"user", action: 'verify'}) do |t| %>
+
+Name: <%= t.text_field(:name) %><br>
+password: <%= t.text_field(:password) %><br>
+<%= submit_tag("Login") %>
+
+<% end %>
+
+</div>
+</body>
+</html>
